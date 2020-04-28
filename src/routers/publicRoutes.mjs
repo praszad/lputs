@@ -1,7 +1,5 @@
 import express from 'express';
 const router = express.Router();
-function dummyFunction(req, res) {
-  res.status(200).send('empty Function call');
-}
-router.get('/demo', dummyFunction);
+import { sampleCheck } from '../controllers/publicController.mjs';
+router.get('/demo', sampleCheck);
 export default router;
