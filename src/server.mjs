@@ -4,6 +4,8 @@ dotenv.config();
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import { publicRouter } from './routers/index.mjs';
+import { connectDb } from './config/connection.mjs';
+
 const app = express();
 const PORT = process.env.PORT || 7777;
 
@@ -12,7 +14,8 @@ app.use(bodyParser.json());
 
 function startApp() {
   app.listen(PORT, () => {
-    console.log('connection will be  d soon ha established', PORT);
+    console.log('App COnnected on port:', PORT);
+    connectDb();
   });
 }
 app.use('/test', publicRouter);
