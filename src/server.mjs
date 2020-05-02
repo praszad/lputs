@@ -18,6 +18,7 @@ function startApp() {
     connectDb();
   });
 }
-app.use('/test', publicRouter);
+const urlVersion = '/api/v1';
+app.use(urlVersion, publicRouter);
 
 export default startApp;

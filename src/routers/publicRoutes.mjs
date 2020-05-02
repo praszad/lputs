@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { sampleCheck } from '../controllers/publicController.mjs';
-router.get('/demo', sampleCheck);
-router.post('/user/add', sampleCheck);
+import { signupUser, loginUser } from '../controllers/publicController.mjs';
+router.post('/signup', signupUser);
+router.post('/login', loginUser);
 export default router;
