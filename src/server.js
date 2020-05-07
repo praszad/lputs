@@ -3,8 +3,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { publicRouter } from './routers/index.mjs';
-import { connectDb } from './config/connection.mjs';
+import { publicRouter } from './routers/index.js';
+import { connectDb } from './config/connection.js';
 
 const app = express();
 const PORT = process.env.PORT || 7777;

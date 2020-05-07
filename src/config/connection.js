@@ -6,7 +6,7 @@ export function connectDb() {
     { useNewUrlParser: true, useUnifiedTopology: true },
     (err) => {
       if (!err) {
-        console.log('Db Connected on : ', url);
+        console.log('Db Successfully Connected on : ', url);
       } else console.log('Db Connection failed due to : ', { err });
     }
   );
